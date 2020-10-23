@@ -9,154 +9,13 @@
 
 
 ## Features
-* Material design
-* Polymer
-* Offline access
-* Responsive
-* Animations
-* Integrated speakers and sessions management
-* SVG icons
-* SEO friendly
-* Optimized and fast
-* Editable theme colors
-* ES2015 (compiles with Babel)
-* Quick deploy
-
-
-### Requirements
-Project dependencies:
-
-- Node.js used to run JavaScript tools from the command line.
-- npm, the node package manager, installed with Node.js and used to install Node.js packages.
-- gulp, a Node.js-based build tool.
-- bower, a Node.js-based package manager used to install front-end packages (like Polymer).
-
-**To install dependencies:**
-
-1)  Check your Node.js version.
-
-```sh
-node --version
-```
-
-The version should be 0.12.x or above.
-
-2)  If you don't have Node.js installed, or you have a lower version, go to [nodejs.org](https://nodejs.org) and click on the big green Install button.
-
-3)  Install `gulp` and `bower` globally.
-
-```sh
-npm install -g gulp bower
-```
-
-This lets you run `gulp` and `bower` from the command line.
-
-4)  Install the projects's local `npm` and `bower` dependencies.
-
-```sh
-cd gdg-bambili.xyz && npm install && bower install
-```
-
-
-### Modify to suit your needs
-* Event info - [metadata folder](https://github.com/gdg-x/hoverboard/tree/master/app/metadata)
-* Theme colors - [variables.css](https://github.com/gdg-x/hoverboard/tree/master/app/themes/hoverboard-theme/variables.css)
-* Deployment [configs](https://github.com/gdg-x/hoverboard/tree/master/config.js)
+* Bootstrap 4, 
+* HTML 5, 
+* SASS
+* CSS3 and W3C validated markup
 
 
 ### Development workflow
-#### Initialize your app
-
-```sh
-gulp init
-```
-
-#### Serve / watch
-
-```sh
-gulp serve
-```
-
-This outputs an IP address you can use to locally test and another that can be used on devices connected to your network.
-
-#### Build and serve the output from the dist build
-
-```sh
-gulp serve:dist
-gulp serve:gae
-```
-
-#### Run tests
-
-```sh
-gulp test:local
-```
-
-#### Build & Vulcanize
-
-```sh
-gulp
-```
-
-### Deployment
-
-GitHub Actions workflow on AWS S3
-
-#### Deploy to development environment
-
-```sh
-gulp deploy:dev
-```
-
-#### Deploy to staging environment
-
-```sh
-gulp deploy:stag
-```
-
-#### Deploy to production environment
-
-```sh
-gulp deploy:prod
-```
-
-#### Promote the staging version to the production environment
-
-```sh
-gulp deploy:promote
-```
-
-
-### Tools
-
-#### Download Google Fonts
-
-Download Google Fonts for load page performance and offline using.
-Fonts list for download is in file [fonts.list](https://github.com/gdg-x/hoverboard/blob/master/fonts.list).
-
-```sh
-gulp download:fonts
-```
-
-#### PageSpeed Insights
-
-```sh
-gulp pagespeed
-```
-
-#### Update versions of dependencies to the latest versions
-
-```sh
-# Install tool
-npm install -g npm-check-updates
-
-# Check latest versions
-npm run check:ver # Alias for "ncu && ncu -m bower"
-
-# Update to the latest versions
-npm run update:ver # Alias for "ncu -u && ncu -um bower"
-```
-
 
 ## Contributing
 
@@ -168,8 +27,25 @@ npm run update:ver # Alias for "ncu -u && ncu -um bower"
 6. Push to the branch (`git push origin my-new-feature`)
 7. Create new Pull Request
 
+```bash
+$ git clone git@github.com:GDG-Bambili/gdgbambili.dev.git
+$ cd gdgbambili.dev/src
+```
 
-### Contributors
+Edit the HTML files accordingly
+
+Other page templates can be found in the `docs/templates` directory
+
+### PRs
+Once done with the changes in your branch, create a PR and an admin can review and merge.
+
+
+### Deployment
+
+GitHub Actions workflow on AWS S3
+
+
+### Authors
 
 Maintainer: [@ch3ck](https://github.com/ch3ck).
 
