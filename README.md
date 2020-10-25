@@ -9,8 +9,9 @@
 
 
 ## Features
-* Bootstrap 4, 
-* HTML 5, 
+
+* Bootstrap 4
+* HTML 5
 * SASS
 * CSS3 and W3C validated markup
 
@@ -18,7 +19,7 @@
 ### Development workflow
 
 ```bash
-$ git clone git@github.com:GDG-Bambili/gdgbambili.dev.git
+$ git clone git@github.com:gdg-bambili/gdgbambili.dev.git
 $ cd gdgbambili.dev/src
 ```
 
