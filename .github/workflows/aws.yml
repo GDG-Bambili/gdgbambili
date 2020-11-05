@@ -27,5 +27,5 @@ jobs:
         AWS_BUCKET: ${{ secrets.AWS_BUCKET }}
         AWS_CLOUDFRONT_DIST_ID: ${{ secrets.AWS_CLOUDFRONT_DIST_ID }}
       run: |
-       aws s3 sync --region ${AWS_DEFAULT_REGION} ${SOURCE_DIR} s3://${AWS_BUCKET}
+       aws s3 cp --recursive --region ${AWS_DEFAULT_REGION} ${SOURCE_DIR} s3://${AWS_BUCKET}
        aws cloudfront create-invalidation --distribution-id ${AWS_CLOUDFRONT_DIST_ID} --paths "/*"
