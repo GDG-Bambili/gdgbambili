@@ -1,5 +1,4 @@
-# This workflow will build and push a static web page to Amazon S3
-# and then invalidate the cloudfront distribution.
+# Deployment workflow
 
 on:
   pull_request:
@@ -28,5 +27,5 @@ jobs:
         AWS_BUCKET: ${{ secrets.AWS_BUCKET }}
         AWS_CLOUDFRONT_DIST_ID: ${{ secrets.AWS_CLOUDFRONT_DIST_ID }}
       run: |
-       aws s3 cp --recursive --region ${AWS_DEFAULT_REGION} ${SOURCE_DIR} s3://${AWS_BUCKET}
+       aws s3 sync --region ${AWS_DEFAULT_REGION} ${SOURCE_DIR} s3://${AWS_BUCKET}
        aws cloudfront create-invalidation --distribution-id ${AWS_CLOUDFRONT_DIST_ID} --paths "/*"
